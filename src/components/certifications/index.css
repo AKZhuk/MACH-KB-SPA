@@ -1,0 +1,203 @@
+.drupal-certifications-wrapper {
+  display: flex;
+  padding: 64px 56px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.certifications-header {
+  color: #222;
+  align-self: flex-start;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.certifications-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  align-self: stretch;
+}
+
+.certifications-text {
+  color: #222;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  align-self: stretch;
+}
+
+.certifications-employees-container {
+  display: flex;
+  max-width: 1320px;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.certification-card-container {
+  width: 300px;
+  height: 402px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-card-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.certification-employee-card {
+  display: inline-flex;
+  height: 364px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.certification-employee-card::after {
+  content: "";
+  width: 300px;
+  height: 250px;
+  flex-shrink: 0;
+  top: -252px;
+  position: relative;
+  z-index: 1;
+  background: #f5f5f5;
+}
+
+.certification-employee-ava {
+  position: relative;
+  width: 180px;
+  height: 220px;
+  flex-shrink: 0;
+  border: 6px solid #fff;
+  border-radius: 16px;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.certification-employee-name {
+  color: #222;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  z-index: 2;
+}
+
+.certification-badges-container {
+  display: flex;
+  max-width: 280px;
+  height: 100px;
+  flex-shrink: 0;
+  z-index: 2;
+  justify-content: center;
+  margin-right: -10%;
+}
+
+.certification-badge {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.certification-btn {
+  display: flex;
+  padding: 12px 28px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  color: #fff !important;
+  text-decoration: none !important;
+  cursor: pointer;
+  background: #064771;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.certification-btn:hover {
+  background: rgba(6, 71, 113, 0.8);
+}
+
+.small-ava-container {
+  display: flex;
+  width: 192px;
+  flex-wrap: wrap;
+  background: #ffffff;
+}
+
+.small-avatar {
+  width: 90px;
+  height: 105px;
+  border: 3px solid white;
+  border-radius: 10px;
+}
+
+.small-bg-container::after {
+  top: -228px;
+}
+
+.certificated-show-all-btn {
+  display: flex;
+  padding: 12px 28px;
+  margin-top: 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: #064771 !important;
+  border: 2px solid #064771;
+  background: rgba(255, 255, 255, 0.3);
+  text-decoration: none !important;
+  flex-shrink: 0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0.16px;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.certificated-show-all-btn svg path {
+  transition: fill 0.3s ease;
+}
+
+.certificated-show-all-btn:hover {
+  background: #064771;
+  color: #fff !important;
+}
+
+.certificated-show-all-btn:hover svg path {
+  fill: #fff;
+}
+
+.certificated-show-all-btn span {
+  display: flex;
+  align-items: center;
+}
+
+.certifications-show-all-text {
+  color: #222;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  z-index: 2;
+}
