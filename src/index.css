@@ -1,11 +1,18 @@
 
 #root {
-  font-family: Ubuntu, sans-serif;
+  font-family: "Nunito Sans";
+}
+
+p{
+  margin: 0;
 }
 
 .competency-wrapper {
   min-height: 638px;
-  background-color:#101021
+
+  background: url("http://static.cdn.epam.com/uploads/b3dcac368f4b1c5ea87d67e0d682da2e/MACH_CC/MACH-header-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header-wrapper {
@@ -88,7 +95,7 @@
   align-items: center;
 }
 
-.blue-btn-with-arrow {
+.blue-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,13 +113,13 @@
   transition: background 0.3s ease;
 }
 
-.blue-btn-with-arrow span {
+.blue-btn span {
   display: flex;
   align-items: center;
 }
 
 
-.blue-btn-with-arrow:hover {
+.blue-btn:hover {
   background: #3a67d9;
 }
 
@@ -133,7 +140,7 @@
   flex-direction: row;
 }
 
-.kb-craft-content--m .blue-btn-with-arrow {
+.kb-craft-content--m .blue-btn {
   margin: 0;
   padding: 8px 18px;
   font-size: 14px;
@@ -162,8 +169,45 @@
   gap: 0;
 }
 
-.kb-craft-content--s .blue-btn-with-arrow {
+.kb-craft-content--s .blue-btn {
   margin: 5px 0;
   padding: 8px 18px;
   font-size: 14px;
+}
+
+.competency-center-header {
+  color: #FFF;
+  text-align: center;
+  font-size: 64px;
+  font-style: normal;
+  line-height: 110%;
+}
+
+.competency-center-content {
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.competency-center-section {
+  display: flex;
+  color: #FFF;
+  gap: 36px;
+  max-width: 689px;
+  flex-direction: column;
+  align-items: start;
+  padding: 80px 40px;
+
+}
+
+.competency-center-divider{
+  background: #FFF;
+  height: 1px;
+  width: 100%;
+}
+
+.competency-center-section p{
+  text-align: start;
 }

@@ -1,0 +1,132 @@
+.mach-heroes-wrapper {
+  display: flex;
+  padding: 105px 56px 64px;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.hero-board-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.hero-card-container {
+  cursor: pointer;
+  text-decoration: none !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-card-container:hover {
+
+  cursor: pointer;
+}
+
+.employee-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+}
+
+.hero-badges-container {
+  display: flex;
+  height: 90px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 30px;
+}
+
+.hero-badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.badge-count {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 18px;
+  left: 36px;
+  background-color: white;
+  border: solid 1px #e5f1fe;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  color: #222;
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.employee-photo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid #f5f5f5;
+}
+
+.employee-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  align-self: stretch;
+  margin-top: -45px;
+}
+
+.hero-employee-name {
+  color: #222;
+  text-align: center;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}
+
+.hero-employee-role {
+  color: #222;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.hero-employee-location {
+  color: #4e4e4e;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.mach-heroes-divider {
+  height: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mach-heroes-divider div:first-child {
+  background: #2629a4;
+  width: 50%;
+}
+
+.mach-heroes-divider div:last-child {
+  background: #da5644;
+  width: 50%;
+}

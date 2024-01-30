@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import {BlueButton} from '../button/Button';
 
 const IMAGES_SRC = {
   MACH_LOGO:
@@ -7,6 +7,13 @@ const IMAGES_SRC = {
   TEAMS_ICON: 'http://static.cdn.epam.com/uploads/32eb272cb0bf452516ff5a7351d271eb/Drupal_CC/teams_icon.png',
   COMMUNITY_ICON:
     'http://static.cdn.epam.com/uploads/32eb272cb0bf452516ff5a7351d271eb/Drupal_CC/community_icon.png',
+};
+
+const COMPETENCY_TEXT = {
+  HEADER: '<b>MACH</b> <br/> Competency Center',
+  SUB_HEADER: 'ACQUIA PARTNERSHIP',
+  CONTENT:
+    "We are here to demystify MACH and composability, by sharing experience, opinions and supporting the professional growth of individuals. The core part of our mission is also to deliver solutions require to increase EPAM's footprint in the overall MACH market.",
 };
 
 const Logo = () => (
@@ -129,7 +136,7 @@ const Navigation = () => (
             />
           </a>
           <a
-            href='https://wearecommunity.io/communities/drupal'
+            href='https://wearecommunity.io/communities/mach'
             target='_blank'
             rel='noreferrer'>
             <img
@@ -143,53 +150,28 @@ const Navigation = () => (
   </nav>
 );
 
-const GreenBtnWithArrow = ({text, link}) => (
-  <a
-    href={link}
-    className='blue-btn-with-arrow'>
-    {text}
-    <span>
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        width='24'
-        height='24'
-        viewBox='0 0 24 24'
-        fill='none'>
-        <g clipPath='url(#clip0_73_4496)'>
-          <path
-            d='M8.91016 19.92L15.4302 13.4C16.2002 12.63 16.2002 11.37 15.4302 10.6L8.91016 4.07996'
-            stroke='white'
-            strokeWidth='2'
-            strokeMiterlimit='10'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-          />
-        </g>
-        <defs>
-          <clipPath id='clip0_73_4496'>
-            <rect
-              width='24'
-              height='24'
-              fill='white'
-            />
-          </clipPath>
-        </defs>
-      </svg>
-    </span>
-  </a>
-);
-
 export const Header = () => (
   <div className='competency-wrapper'>
     <div className='header-wrapper'>
       <Logo />
+      {/* <img
+        src='http://static.cdn.epam.com/uploads/b3dcac368f4b1c5ea87d67e0d682da2e/MACH_CC/mach-logo.png'
+        alt='logo'
+      /> */}
       <div className='navigation-row'>
         <Navigation />
-        <GreenBtnWithArrow
+        <BlueButton
           text='Contact Us'
           link='mailto:OrgCompetencyDrupal@epam.com'
         />
       </div>
+    </div>
+    <div className='competency-center-section'>
+      <p
+        className='competency-center-header'
+        dangerouslySetInnerHTML={{__html: COMPETENCY_TEXT.HEADER}}></p>
+      <div className='competency-center-divider'></div>
+      <p className='competency-center-content'>{COMPETENCY_TEXT.CONTENT}</p>
     </div>
   </div>
 );

@@ -1,3 +1,6 @@
+import './index.css';
+import {SectionHeader} from '../section-header/SectionHeader';
+import React from 'react';
 const marginRightMapping = {
   1: '0%',
   2: '-5%',
@@ -20,32 +23,6 @@ const getEmployeesData = ({employees, badges}) => {
     })),
   }));
 };
-
-const HeroBoardHeader = ({text, btn, link}) => (
-  <div className='heroes-header-container'>
-    <header className='heroes-header'>{text}</header>
-    <a
-      href={link}
-      target='_blank'
-      className='more-heroes-btn'
-      rel='noreferrer'>
-      {btn}
-      <span>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='16'
-          height='16'
-          viewBox='0 0 16 16'
-          fill='none'>
-          <path
-            d='M3 1.62L4.615 0L12.6 8L4.615 16L3 14.38L9.365 8L3 1.62Z'
-            fill='#064771'
-          />
-        </svg>
-      </span>
-    </a>
-  </div>
-);
 
 const HeroBadge = ({src, name, count, style}) => (
   <div style={{position: 'relative', ...style}}>
@@ -71,7 +48,7 @@ const HeroCard = ({photo, fullName, location, title, badges, profile}) => {
         <img
           className='employee-photo'
           src={photo}
-          alt='Eployee photo'
+          alt='Employee'
         />
         <div
           className='hero-badges-container'
@@ -98,8 +75,9 @@ const HeroCard = ({photo, fullName, location, title, badges, profile}) => {
 
 const HeroBoardContainer = ({employees = []}) => (
   <div className='hero-board-container'>
-    {employees.map(({photo, fullName, location, title, badges, profile}) => (
+    {employees.map(({photo, fullName, location, title, badges, profile}, index) => (
       <HeroCard
+        key={fullName + index}
         fullName={fullName}
         location={location}
         title={title}
@@ -116,13 +94,18 @@ export const HeroBoard = ({data}) => {
   const employeesData = getEmployeesData({employees, badges});
 
   return (
-    <div className='drupal-heroes-wrapper'>
-      <HeroBoardHeader
-        text='Hero Board'
-        btn='Show All'
-        link='https://kb.epam.com/display/EPMCDRCC/Drupal+Heroes+2024'
-      />
-      <HeroBoardContainer employees={employeesData} />
-    </div>
+    <React.Fragment>
+      <div className='mach-heroes-wrapper'>
+        <SectionHeader
+          title='Hero Board'
+          moreLink={{title: 'Show more', href: '#'}}
+        />
+        <HeroBoardContainer employees={employeesData} />
+      </div>
+      <div className='mach-heroes-divider'>
+        <div></div>
+        <div></div>
+      </div>
+    </React.Fragment>
   );
 };

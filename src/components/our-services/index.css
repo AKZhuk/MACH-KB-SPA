@@ -1,0 +1,60 @@
+.mach-services-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  padding: 32px 56px 0px 56px;
+  gap: 24px;
+}
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  width: 50%;
+  display: flex;
+  min-height: 370px;
+}
+
+.service-card-content-container {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.service-card p {
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 150%; /* 27px */
+}
+.service-card img {
+  width: 40%;
+}
+
+.service-card a {
+  display: flex;
+  justify-content: center;
+  color: #fff!important;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 120% */
+  letter-spacing: 0.2px;
+  text-decoration-line: underline;
+}
+
+.service-card a:hover{
+  opacity: 0.8;
+}
+
+.service-card-header {
+  color: #fff;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32.085px; /* 114.591% */
+  letter-spacing: -0.28px;
+}

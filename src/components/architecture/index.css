@@ -1,0 +1,19 @@
+.mach-architecture-wrapper{
+  padding: 64px 56px;
+  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border-bottom: 3px solid #222; */
+}
+
+.mach-architecture-text{
+  align-self: start;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 27px */
+  padding-bottom: 64px;
+  margin-bottom: 64px;
+  border-bottom: 3px solid #222;
+}

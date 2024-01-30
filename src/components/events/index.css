@@ -1,0 +1,87 @@
+.mach-events-wrapper {
+  display: flex;
+  padding: 20px 56px 105px;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  background: url("http://static.cdn.epam.com/uploads/b3dcac368f4b1c5ea87d67e0d682da2e/MACH_CC/MACH-event-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.events-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  /* flex-wrap: wrap; */
+  gap: 32px;
+}
+
+.event-card-container {
+  display: flex;
+  max-width: 443px;
+  padding-bottom: 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none !important;
+  gap: 8px;
+  flex: 1 0 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.event-card-img {
+  align-self: stretch;
+  width: 443px;
+  height: 220px;
+  object-fit: contain;
+  object-position: top;
+}
+
+.event-card-content-container {
+  display: flex;
+  padding: 20px 24px 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.event-card-header {
+  color: #064771;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+}
+
+.event-card-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 10px;
+}
+
+.event-card-date {
+  color: #4e4e4e;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.event-card-location {
+  color: #4e4e4e;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
