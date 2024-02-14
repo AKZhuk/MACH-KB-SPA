@@ -19,11 +19,14 @@ function App() {
       <WhySection />
       <Certifications data={window.__SERVER_DATA__} />
       <Events data={window.__SERVER_DATA__} />
-      <HeroBoard data={window.__SERVER_DATA__} />
-      <Team />
-      <Footer />
+      <div className='footer__background'>
+        <HeroBoard data={window.__SERVER_DATA__} />
+        <Team />
+        <Footer />
+      </div>
     </div>
   );
 }
 
 export default App;
+

@@ -1,12 +1,7 @@
 .mach-events-wrapper {
-  display: flex;
-  padding: 20px 56px 105px;
-  flex-direction: column;
-  align-items: center;
+  padding-bottom: 90px;
   gap: 32px;
-  background: url("http://static.cdn.epam.com/uploads/b3dcac368f4b1c5ea87d67e0d682da2e/MACH_CC/MACH-event-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: url('http://static.cdn.epam.com/uploads/b3dcac368f4b1c5ea87d67e0d682da2e/MACH_CC/MACH-event-bg.jpg');
 }
 
 .events-container {
@@ -14,33 +9,34 @@
   align-items: flex-start;
   justify-content: center;
   align-self: stretch;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   gap: 32px;
 }
 
-.event-card-container {
+.event-card__container {
   display: flex;
-  max-width: 443px;
+  max-width: 420px;
   padding-bottom: 15px;
   flex-direction: column;
   align-items: flex-start;
+  align-self: stretch;
   text-decoration: none !important;
-  gap: 8px;
   flex: 1 0 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
 }
 
-.event-card-container:hover {
+.event-card__container:hover {
   transform: scale(1.02);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-.event-card-img {
+.event-card__img {
   align-self: stretch;
-  width: 443px;
   height: 220px;
-  object-fit: contain;
-  object-position: top;
+  width: 421px;
+  background-size: cover;
+  background-position: center;
 }
 
 .event-card-content-container {
@@ -52,36 +48,66 @@
   align-self: stretch;
 }
 
-.event-card-header {
-  color: #064771;
+.event-card__header {
+  color: #1F55DB;
   font-size: 22px;
-  font-style: normal;
   font-weight: 700;
   line-height: 130%;
 }
 
-.event-card-info {
+.event-card__info {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 4px;
-  margin-top: 10px;
 }
 
-.event-card-date {
-  color: #4e4e4e;
+.event-card__date {
+  color: #222;
   font-size: 16px;
-  font-style: normal;
   font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
 }
 
-.event-card-location {
-  color: #4e4e4e;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin: 0;
+.event-card__description {
+  overflow: hidden;
+  color: #222;
+  text-overflow: ellipsis;
+  line-height: 24px;
+  max-height: 72px;
+}
+
+.kb-craft-content--l {
+  .events-container {
+    align-items: flex-start;
+    align-content: flex-start;
+    align-self: stretch;
+  }
+}
+
+.kb-craft-content--l,
+.kb-craft-content--m,
+.kb-craft-content--s {
+  .event-card__container {
+    max-width: 382px;
+  }
+  .event-card__img{
+    width: 386px;
+    height: 200px;
+  }
+    .events-container {
+      gap: 32px;
+      justify-content: center;
+    }
+  .event-card__header {
+    font-size: 18px;
+  }
+  .event-card__date {
+    font-size: 13px;
+  }
+  .event-card__description {
+    font-size: 13px;
+    line-height: 150%;
+  }
 }

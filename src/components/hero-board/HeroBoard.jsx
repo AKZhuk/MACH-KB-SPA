@@ -8,6 +8,14 @@ const marginRightMapping = {
   4: '-25%',
 };
 
+
+const MAX_SHOWN_HEROES = 5;
+
+const heroBoardConfig = {
+  title: 'Hero Board',
+  moreLink: {title: 'Show more', href: '#'},
+};
+
 const getEmployeesData = ({employees, badges}) => {
   const badgeDataByID = badges.reduce((acc, badge) => ({...acc, [badge.id]: badge}), {});
 
@@ -31,7 +39,7 @@ const HeroBadge = ({src, name, count, style}) => (
       src={src}
       alt={name}
     />
-    {count > 1 && <div className='badge-count'>{`x${count}`}</div>}
+    {count > 1 && <div className='hero-badge__count'>{`x${count}`}</div>}
   </div>
 );
 
@@ -46,7 +54,7 @@ const HeroCard = ({photo, fullName, location, title, badges, profile}) => {
       rel='noreferrer'>
       <div className='employee-card'>
         <img
-          className='employee-photo'
+          className='hero-employee__photo'
           src={photo}
           alt='Employee'
         />
@@ -63,10 +71,10 @@ const HeroCard = ({photo, fullName, location, title, badges, profile}) => {
             />
           ))}
         </div>
-        <div className='employee-info-container'>
-          <p className='hero-employee-name'>{fullName}</p>
-          <p className='hero-employee-role'>{title}</p>
-          <p className='hero-employee-location'>{location}</p>
+        <div className='employee-info-container flex-column'>
+          <p className='hero-employee__name'>{fullName}</p>
+          <p className='hero-employee__role'>{title}</p>
+          <p className='hero-employee__location'>{location}</p>
         </div>
       </div>
     </a>
@@ -74,34 +82,36 @@ const HeroCard = ({photo, fullName, location, title, badges, profile}) => {
 };
 
 const HeroBoardContainer = ({employees = []}) => (
-  <div className='hero-board-container'>
-    {employees.map(({photo, fullName, location, title, badges, profile}, index) => (
-      <HeroCard
-        key={fullName + index}
-        fullName={fullName}
-        location={location}
-        title={title}
-        badges={badges}
-        photo={photo}
-        profile={profile}
-      />
-    ))}
+  <div className='hero-board-container max-width-wrapper'>
+    {employees
+      .slice(0, MAX_SHOWN_HEROES)
+      .map(({photo, fullName, location, title, badges, profile}, index) => (
+        <HeroCard
+          key={fullName + index}
+          fullName={fullName}
+          location={location}
+          title={title}
+          badges={badges}
+          photo={photo}
+          profile={profile}
+        />
+      ))}
   </div>
 );
 
 export const HeroBoard = ({data}) => {
   const {employees, badges} = data.RECOGNITIONS;
   const employeesData = getEmployeesData({employees, badges});
-
+  const {title, moreLink} = heroBoardConfig;
   return (
     <React.Fragment>
-      <div className='mach-heroes-wrapper'>
+      <section className='mach-heroes-wrapper wrapper flex-column'>
         <SectionHeader
-          title='Hero Board'
-          moreLink={{title: 'Show more', href: '#'}}
+          title={title}
+          moreLink={moreLink}
         />
         <HeroBoardContainer employees={employeesData} />
-      </div>
+      </section>
       <div className='mach-heroes-divider'>
         <div></div>
         <div></div>

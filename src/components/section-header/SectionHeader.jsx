@@ -2,12 +2,12 @@ import './index.css';
 export const SectionHeader = ({title, moreLink, isCentred = false}) => {
   return (
     <div className={isCentred ? 'sectionHeader centred' : 'sectionHeader'}>
-      <span className='title'>{title}</span>
+      <span className='sectionHeader__title'>{title}</span>
       {moreLink ? (
         <a
           href={moreLink.href}
           target='_blank'
-          className='more-heroes-btn'
+          className='sectionHeader__button'
           rel='noreferrer'>
           {moreLink.title}
           <span>

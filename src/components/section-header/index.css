@@ -1,15 +1,15 @@
 .sectionHeader {
   font-size: 40px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 120%; /* 48px */
-  text-transform: uppercase;
+  line-height: 120%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
-
+.sectionHeader__title {
+  text-transform: uppercase;
+}
 .centred {
   width: fit-content;
 }
@@ -28,42 +28,52 @@
   opacity: 0.8;
 }
 
-
-.sectionHeader > a {
-  text-decoration: none;
-}
-
-
-.more-heroes-btn {
+.sectionHeader__button {
   display: flex;
-  padding: 0px 24px;
+  padding: 16px 24px;
   justify-content: center;
   align-items: center;
-  gap: 12px;
-  font-size: 16px;
+  gap: 18px;
+  font-size: 20px;
+  line-height: 24px;
   border-radius: 12px;
   border: 2px solid #222;
   background: rgba(255, 255, 255, 0.3);
   cursor: pointer;
   text-decoration: none !important;
+  text-wrap: nowrap;
   color:  #222 !important;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-.more-heroes-btn span {
+.sectionHeader__button span {
   display: flex;
   align-items: center;
 }
 
-.more-heroes-btn svg path {
+.sectionHeader__button svg path {
   transition: fill 0.3s ease;
 }
 
-.more-heroes-btn:hover {
+.sectionHeader__button:hover {
   background: #064771;
   color: #fff !important;
 }
 
-.more-heroes-btn:hover svg path {
+.sectionHeader__button:hover svg path {
   fill: #fff;
+}
+
+.kb-craft-content--l,
+.kb-craft-content--m,
+.kb-craft-content--s{
+  .sectionHeader {
+  font-size: 34px;
+}
+
+.sectionHeader__button {
+  font-size: 18px;
+  gap: 12px;
+  padding: 12px 24px;
+}
 }

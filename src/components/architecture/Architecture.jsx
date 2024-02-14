@@ -9,19 +9,26 @@ const architectureConfig = {
 };
 
 export const Architecture = () => (
-  <div className='mach-architecture-wrapper'>
+  <section className='mach-architecture-wrapper wrapper flex-column'>
     <SectionHeader title={architectureConfig.title} />
-    <p className='mach-architecture-text'>{architectureConfig.text}</p>
+    <p className='mach-architecture__text'>{architectureConfig.text}</p>
     <img
       width='100%'
+      className='mach-architecture__img_main max-width-wrapper'
       src='http://static.cdn.epam.com/uploads/b3dcac368f4b1c5ea87d67e0d682da2e/MACH_CC/MACH-architecture-scheme.jpg'
+      alt='architecture scheme'
+    />
+    <img
+      width='100%'
+      className='mach-architecture__img_mobile'
+      src=' http://static.cdn.epam.com/uploads/b3dcac368f4b1c5ea87d67e0d682da2e/MACH_CC/MACH-architecture-scheme-640.png'
       alt='architecture scheme'
     />
     <BlueButton
       text={architectureConfig.button.text}
       link={architectureConfig.button.link}
     />
-  </div>
+  </section>
 );
 
 // const container = document.getElementById('mach-architecture');

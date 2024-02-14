@@ -6,23 +6,19 @@ const aboutUsConfig = {
   facts: [
     {
       number: '12+',
-      firsLine: 'YEARS OF CONSULTING',
-      secondLine: '& ENGINEERING',
+      description: 'YEARS OF CONSULTING & ENGINEERING',
     },
     {
       number: '130+',
-      firsLine: 'CUSTOMER SUCCESS',
-      secondLine: 'STORIES',
+      description: 'CUSTOMER SUCCESS STORIES',
     },
     {
       number: '1000+',
-      firsLine: 'CONSULTANTS',
-      secondLine: '& ENGINEERS',
+      description: 'CONSULTANTS & ENGINEERS',
     },
     {
       number: '300+',
-      firsLine: 'MACH CERTIFIED',
-      secondLine: 'PROFESSIONALS',
+      description: 'MACH CERTIFIED PROFESSIONALS',
     },
   ],
 };
@@ -30,23 +26,19 @@ const aboutUsConfig = {
 export const AboutUs = () => {
   const {title, facts} = aboutUsConfig;
   return (
-    <div className='aboutUs'>
+    <section className='about-us wrapper flex-column'>
       <SectionHeader title={title} />
-      <div className='aboutUs-facts'>
+      <div className='about-us-facts max-width-wrapper'>
         {facts.map((fact) => (
           <div
             className='fact'
             key={fact.number}>
-            <div className='fact-number'>{fact.number}</div>
-            <div className='fact-desc'>
-              {fact.firsLine}
-              <br />
-              {fact.secondLine}
-            </div>
+            <div className='fact__number'>{fact.number}</div>
+            <p className='fact__description'>{fact.description}</p>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

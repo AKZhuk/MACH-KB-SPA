@@ -1,19 +1,29 @@
 import React from 'react';
 import {BlueButton} from '../button/Button';
 
-const IMAGES_SRC = {
-  MACH_LOGO:
-    'http://static.cdn.epam.com/uploads/32eb272cb0bf452516ff5a7351d271eb/Drupal_CC/drupal-logo-main.svg',
-  TEAMS_ICON: 'http://static.cdn.epam.com/uploads/32eb272cb0bf452516ff5a7351d271eb/Drupal_CC/teams_icon.png',
-  COMMUNITY_ICON:
-    'http://static.cdn.epam.com/uploads/32eb272cb0bf452516ff5a7351d271eb/Drupal_CC/community_icon.png',
-};
-
-const COMPETENCY_TEXT = {
-  HEADER: '<b>MACH</b> <br/> Competency Center',
-  SUB_HEADER: 'ACQUIA PARTNERSHIP',
-  CONTENT:
-    "We are here to demystify MACH and composability, by sharing experience, opinions and supporting the professional growth of individuals. The core part of our mission is also to deliver solutions require to increase EPAM's footprint in the overall MACH market.",
+const headerConfig = {
+  navigation: {
+    links: [
+      {text: 'OUR TEAM', href: ''},
+      {text: 'WHAT WE DO', href: ''},
+      {text: 'JOIN US', href: ''},
+    ],
+  },
+  contactUs: {
+    text: 'Contact Us',
+    links: [
+      {
+        text: 'Competency',
+        link: 'mailto:OrgCompetencyMACH@epam.com',
+      },
+      {
+        text: 'Staffing',
+        link: 'OrgStaffingMACHCommittee@epam.com',
+      },
+    ],
+  },
+  title: '<b>MACH</b> <br/> Competency Center',
+  text: "We are here to demystify MACH and composability, by sharing experience, opinions and supporting the professional growth of individuals. The core part of our mission is also to deliver solutions require to increase EPAM's footprint in the overall MACH market.",
 };
 
 const Logo = () => (
@@ -22,7 +32,8 @@ const Logo = () => (
     width='222'
     height='66'
     viewBox='0 0 222 66'
-    fill='none'>
+    fill='none'
+    className='logo'>
     <path
       d='M76.6728 32.5681L71.3303 15.1121H71.2061C71.2268 15.5277 71.2578 16.1511 71.2992 16.9824C71.3407 17.8136 71.3821 18.7072 71.4235 19.6631C71.4649 20.5983 71.4856 21.4503 71.4856 22.2192V32.5681H67.2924V10.3117H73.6909L78.9403 27.3313H79.0334L84.5934 10.3117H90.992V32.5681H86.6123V22.0321C86.6123 21.3256 86.6227 20.5151 86.6434 19.6008C86.6848 18.6864 86.7159 17.824 86.7366 17.0136C86.778 16.1823 86.8091 15.5589 86.8298 15.1433H86.7055L80.9903 32.5681H76.6728Z'
       fill='white'
@@ -120,59 +131,46 @@ const Logo = () => (
 
 const Navigation = () => (
   <nav className='nav-items'>
-    <a href='https://kb.epam.com/display/EPMCDRCC/Our+Team+New'>OUR TEAM</a>
-    <a href='https://kb.epam.com/display/EPMCDRCC/What+we+do'>WHAT WE DO</a>
-    <div className='join-us-container'>
-      <div className='inner-container'>
-        <a href='#'>JOIN US</a>
-        <div id='popup'>
-          <a
-            href='https://teams.microsoft.com/l/channel/19%3AnaL7oZ2GDh_kZfQCYzlKLVnGwQ-4nhWvxcaDtr0lqN81%40thread.tacv2/General?groupId=f1881daa-125f-4a0b-b125-f95581fb5029&tenantId=b41b72d0-4e9f-4c26-8a69-f949f367c91d'
-            target='_blank'
-            rel='noreferrer'>
-            <img
-              src={IMAGES_SRC.TEAMS_ICON}
-              alt='teams-icon'
-            />
-          </a>
-          <a
-            href='https://wearecommunity.io/communities/mach'
-            target='_blank'
-            rel='noreferrer'>
-            <img
-              src={IMAGES_SRC.COMMUNITY_ICON}
-              alt='community-icon'
-            />
-          </a>
-        </div>
-      </div>
-    </div>
+    {headerConfig.navigation.links.map((link) => (
+      <a
+        href={link.href}
+        key={link.text}>
+        {link.text}
+      </a>
+    ))}
   </nav>
 );
 
 export const Header = () => (
   <div className='competency-wrapper'>
-    <div className='header-wrapper'>
+    <header className='header-wrapper'>
       <Logo />
-      {/* <img
-        src='http://static.cdn.epam.com/uploads/b3dcac368f4b1c5ea87d67e0d682da2e/MACH_CC/mach-logo.png'
-        alt='logo'
-      /> */}
       <div className='navigation-row'>
         <Navigation />
-        <BlueButton
-          text='Contact Us'
-          link='mailto:OrgCompetencyDrupal@epam.com'
-        />
+        <div className='dropdown'>
+          <BlueButton text={headerConfig.contactUs.text} />
+          <div className='dropdown-content'>
+            {headerConfig.contactUs.links.map((item) => (
+              <a
+                className='dropdown__link'
+                href={item.link}
+                target='_blank'
+                key={item.text}
+                rel='noreferrer'>
+                <div>{item.text}</div>
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
-    <div className='competency-center-section'>
+    </header>
+    <section className='competency-center-section'>
       <p
         className='competency-center-header'
-        dangerouslySetInnerHTML={{__html: COMPETENCY_TEXT.HEADER}}></p>
+        dangerouslySetInnerHTML={{__html: headerConfig.title}}></p>
       <div className='competency-center-divider'></div>
-      <p className='competency-center-content'>{COMPETENCY_TEXT.CONTENT}</p>
-    </div>
+      <p className='competency-center-content'>{headerConfig.text}</p>
+    </section>
   </div>
 );
 

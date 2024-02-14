@@ -1,9 +1,5 @@
 .mach-heroes-wrapper {
-  display: flex;
-  padding: 105px 56px 64px;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
+  gap: 42px;
 }
 
 .hero-board-container {
@@ -21,7 +17,6 @@
 }
 
 .hero-card-container:hover {
-
   cursor: pointer;
 }
 
@@ -31,15 +26,15 @@
   overflow: hidden;
   position: relative;
   align-items: center;
+  width: 228px;
 }
 
 .hero-badges-container {
   display: flex;
-  height: 90px;
+  height: 80px;
   justify-content: center;
-  align-items: center;
   position: relative;
-  bottom: 30px;
+  bottom: 40px;
 }
 
 .hero-badge {
@@ -49,7 +44,7 @@
   position: relative;
 }
 
-.badge-count {
+.hero-badge__count {
   position: relative;
   display: flex;
   align-items: center;
@@ -59,58 +54,48 @@
   background-color: white;
   border: solid 1px #e5f1fe;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   font-size: 12px;
   color: #222;
   text-align: center;
-  font-style: normal;
   font-weight: 700;
   line-height: 24px;
 }
 
-.employee-photo {
-  width: 220px;
-  height: 220px;
+.hero-employee__photo {
+  width: 236px;
+  height: 236px;
   object-fit: cover;
   border-radius: 50%;
   border: 8px solid #f5f5f5;
 }
 
 .employee-info-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 2px;
   align-self: stretch;
   margin-top: -45px;
 }
 
-.hero-employee-name {
+.hero-employee__name {
   color: #222;
   text-align: center;
   font-size: 22px;
-  font-style: normal;
   font-weight: 700;
   line-height: 150%;
 }
 
-.hero-employee-role {
+.hero-employee__role {
   color: #222;
   text-align: center;
-  font-feature-settings: 'clig' off, 'liga' off;
   font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 20px;
 }
 
-.hero-employee-location {
+.hero-employee__location {
   color: #4e4e4e;
   text-align: center;
   font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
   line-height: 18px;
 }
 
@@ -130,3 +115,38 @@
   background: #da5644;
   width: 50%;
 }
+
+.kb-craft-content--l,
+.kb-craft-content--m,
+.kb-craft-content--s {
+  .mach-heroes-wrapper {
+    gap: 34px;
+  }
+  .employee-info-container {
+    gap: 0px;
+  }
+  .hero-board-container {
+    justify-content: center;
+    gap: 28px 32px;
+  }
+  .hero-employee__photo {
+    width: 192px;
+    height: 192px;
+    border: 6px solid #f5f5f5;
+  }
+  .hero-badges-container {
+    height: 72px;
+  }
+  .hero-badge {
+    width: 56px;
+    height: 56px;
+  }
+  .hero-employee__name {
+    font-size: 18px;
+  }
+  .hero-employee__role,
+  .hero-employee__location {
+    font-size: 15px;
+  }
+}
+

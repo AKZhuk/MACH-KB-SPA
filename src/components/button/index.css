@@ -2,26 +2,33 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 12px 28px;
-  background:  #1F55DB;
+  padding: 16px 24px;
+  background: #1f55db;
   border-radius: 12px;
-  color: #FFF !important;
+  color: #fff !important;
   text-decoration: none !important;
-  font-size: 16px;
-  font-style: normal;
+  font-size: 20px;
   font-weight: 700;
   line-height: 24px;
-  letter-spacing: 0.16px;
+  letter-spacing: 0.2px;
   text-wrap: nowrap;
   transition: background 0.3s ease;
 }
 
-.blue-btn span {
+.blue-btn__arrow {
   display: flex;
   align-items: center;
+  padding-left: 10px;
 }
-
 
 .blue-btn:hover {
   background: #3a67d9;
+}
+
+.kb-craft-content--m,
+.kb-craft-content--s {
+  .blue-btn {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
 }
