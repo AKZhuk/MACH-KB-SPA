@@ -2,6 +2,8 @@ import './index.css';
 export const BlueButton = ({text, link, arrow = true}) => (
   <a
     href={link}
+    target='_blank'
+    rel='noreferrer'
     className='blue-btn'>
     {text}
     {arrow && (

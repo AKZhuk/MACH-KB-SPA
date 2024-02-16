@@ -5,7 +5,7 @@ import './index.css';
 const architectureConfig = {
   title: 'Architecture',
   text: 'While utilising traditional single vendor tech platforms, organizations run the risk of trapping themselves in a set of limited capabilities, waiting for upgrades to the latest release in order to make advancements. MACH offers organisations separate building blocks with which they can build all kinds of different commerce solutions. Every component is pluggable, scalable, replaceable, and can be continuously improved through agile development.',
-  button: {text: 'Read more about MACH', link: '#'},
+  button: {text: 'Read more about MACH', link: 'https://kb.epam.com/display/EPMCMACH/MACH+101'},
 };
 
 export const Architecture = () => (

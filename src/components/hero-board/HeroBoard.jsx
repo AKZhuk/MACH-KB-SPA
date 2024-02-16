@@ -13,7 +13,7 @@ const MAX_SHOWN_HEROES = 5;
 
 const heroBoardConfig = {
   title: 'Hero Board',
-  moreLink: {title: 'Show more', href: '#'},
+  moreLink: {title: 'Show more', href: 'https://kb.epam.com/display/EPMCMACH/Board+of+MACH+CC+Heroes'},
 };
 
 const getEmployeesData = ({employees, badges}) => {

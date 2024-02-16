@@ -1,6 +1,10 @@
 #root {
   font-family: 'Nunito Sans';
   font-size: 18px;
+
+}
+html{
+  scroll-behavior: smooth;
 }
 
 p,

@@ -38,6 +38,13 @@
 .service-card__description {
   color: #fff;
   line-height: 150%;
+   a {
+    text-decoration: underline !important;
+    color: #fff !important;
+  }
+  a:hover {
+    opacity: 0.8;
+  }
 }
 .service-card__img {
   background-size: cover;

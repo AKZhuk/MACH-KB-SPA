@@ -4,9 +4,9 @@ import {BlueButton} from '../button/Button';
 const headerConfig = {
   navigation: {
     links: [
-      {text: 'OUR TEAM', href: ''},
-      {text: 'WHAT WE DO', href: ''},
-      {text: 'JOIN US', href: ''},
+      {text: 'OUR TEAM', href: 'https://kb.epam.com/display/EPMCMACH/MACH+Competency+Team'},
+      {text: 'WHAT WE DO', href: 'https://kb.epam.com/display/EPMCMACH/MACH+Services'},
+      {text: 'JOIN US', href: '#our-services'},
     ],
   },
   contactUs: {
@@ -18,7 +18,7 @@ const headerConfig = {
       },
       {
         text: 'Staffing',
-        link: 'OrgStaffingMACHCommittee@epam.com',
+        link: 'mailto:OrgStaffingMACHCommittee@epam.com',
       },
     ],
   },
